@@ -52,12 +52,9 @@ public class PaymentPage {
 		 WebElement BackToOrderOption =browserobject.findElement(BackToOrderBtn);  
 		 js.executeScript("arguments[0].scrollIntoView(true);", BackToOrderOption);
 		 BackToOrderOption.click();
-		 
-		 //wait.until(ExpectedConditions.visibilityOfElementLocated(HomeButton));
-		 //WebElement HomeBtn =browserobject.findElement(HomeButton);  
-		// js.executeScript("arguments[0].scrollIntoView(true);", HomeBtn);
+		
 		 js.executeScript("window.scrollTo(0, 250)");
-		// HomeBtn.click();
+		
 		 
 		 Assert.assertEquals(ActualOrderPrice, ExpectedOrderPrice);
 	}
