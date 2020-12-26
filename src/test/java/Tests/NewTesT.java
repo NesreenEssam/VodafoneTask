@@ -46,7 +46,7 @@ public class NewTesT {
 	String SelectedItem = "selectedItem.png";
 	String AddressPage = "addresspage.png";
 	
-	  String ExpectedErrorMsg = "An account using this email address has already been registered. Please enter a valid password or request a new one. ";
+	String ExpectedErrorMsg = "An account using this email address has already been registered. Please enter a valid password or request a new one. ";
 		String ActualErrorMsg = "An account using this email address has already been registered. Please enter a valid password or request a new one. ";
 		
 	
@@ -60,8 +60,8 @@ public class NewTesT {
 	
 		
 			
-		//Registeration.navigateToRegisterationPage(Firstname,Lastname,email,Passwd,Address,City,PostalCode,MobileNo,AddressAlias);
-		LoginPage.navigateLoginPage();
+		Registeration.navigateToRegisterationPage();
+		//LoginPage.navigateLoginPage();
 		ScreenShoot.ScreenShot(HomePage);
 		
 		
