@@ -8,13 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import Utils.ReadingCredentialFromExceel;
 
 public class RegisterationPage {
 	
 	WebDriver browserobject;
 	WebDriverWait wait;
-	ReadingCredentialFromExceel CredentialExceel;
+	String email;
 	
 	By EmailAddress =By.name("email_create");
 	By CreatAcctBtn = By.id("SubmitCreate");
@@ -36,16 +37,16 @@ public class RegisterationPage {
 	
 	
 	
-	public RegisterationPage(WebDriver browserobject, WebDriverWait wait,ReadingCredentialFromExceel CredentialExceel)
+	public RegisterationPage(WebDriver browserobject, WebDriverWait wait)
 	{
 		this.browserobject=browserobject;
 		this.wait=wait;
-		this.CredentialExceel=CredentialExceel;
+		
 	}
 	
 	public void navigateTositeurl() throws IOException
 	{
-		String SiteUrl = CredentialExceel.ReadingData(0,1);
+		String SiteUrl = ReadingCredentialFromExceel.ReadingData(0,1);
 		 browserobject.navigate().to(SiteUrl);
 	}
 
@@ -53,7 +54,7 @@ public class RegisterationPage {
 	public void navigateToCreatAccount() throws InterruptedException, IOException
 	{
 	
-		String email = CredentialExceel.ReadingData(1, 1);
+		email = ReadingCredentialFromExceel.ReadingData(1, 1);
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(SignInPage));
 	    WebElement SignInBtn =browserobject.findElement(SignInPage);   
         SignInBtn.click();
@@ -70,16 +71,15 @@ public class RegisterationPage {
 	
 	public void navigateToRegisterationPage() throws InterruptedException, IOException
 	{
-		
-		String email = CredentialExceel.ReadingData(1, 1);
-		String Firstname = CredentialExceel.ReadingData(3, 1);
-		String Lastname = CredentialExceel.ReadingData(4, 1);
-		String Passwd = CredentialExceel.ReadingData(2, 1);
-		String address = CredentialExceel.ReadingData(5, 1);
-		String city = CredentialExceel.ReadingData(6, 1);
-		String postalCode = CredentialExceel.ReadingData(7, 1);
-		String mobileNo = CredentialExceel.ReadingData(8, 1);
-		String addressAlias = CredentialExceel.ReadingData(9, 1);
+	
+		String Firstname = ReadingCredentialFromExceel.ReadingData(3, 1);
+		String Lastname = ReadingCredentialFromExceel.ReadingData(4, 1);
+		String Passwd = ReadingCredentialFromExceel.ReadingData(2, 1);
+		String address = ReadingCredentialFromExceel.ReadingData(5, 1);
+		String city = ReadingCredentialFromExceel.ReadingData(6, 1);
+		String postalCode = ReadingCredentialFromExceel.ReadingData(7, 1);
+		String mobileNo = ReadingCredentialFromExceel.ReadingData(8, 1);
+		String addressAlias = ReadingCredentialFromExceel.ReadingData(9, 1);
 		
 		
 		

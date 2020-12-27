@@ -16,23 +16,21 @@ public class CheckOutProcedurePage {
 	
 	
 	By ProceedToCheckBtn = By.xpath("(//span[contains(.,\'Proceed to checkout\')])[2]");
-	//By CheckBoxBtn = By.xpath("//input[@type=\'checkbox\']");
-	//By CheckBoxBtn = By.xpath("//div[@id=\'uniform-cgv\']");
 	By CheckBoxBtn = By.id("uniform-cgv");
 
 	
-	public CheckOutProcedurePage(WebDriver browserobject, WebDriverWait wait,JavascriptExecutor js)
+	public CheckOutProcedurePage(WebDriver browserobject, WebDriverWait wait)
 	{
 		this.browserobject=browserobject;
 		this.wait=wait;
-		this.js=js;
+		
 		
 	}
 	
 	
 	public void FollowCheckOutProcedure() throws InterruptedException
 	{
-
+		js = (JavascriptExecutor) browserobject;
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ProceedToCheckBtn));
 		 WebElement ProceedBtn =browserobject.findElement(ProceedToCheckBtn);  
 		 js.executeScript("arguments[0].scrollIntoView(true);", ProceedBtn);

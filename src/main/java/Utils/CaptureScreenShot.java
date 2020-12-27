@@ -17,7 +17,7 @@ public class CaptureScreenShot {
 	{
 		this.browserobject=browserobject;
 	}
-	public void ScreenShot(String pagename) throws IOException
+	public  void ScreenShot(String pagename) throws IOException
 	{
 		String FilePath = "src\\test\\resources\\"+ pagename;
 		  TakesScreenshot camera = (TakesScreenshot)browserobject;

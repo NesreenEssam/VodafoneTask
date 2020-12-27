@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-26T21:53:04 EET" name="Default suite" finished-at="2020-12-26T21:53:58 EET" duration-ms="53663">
+  <suite started-at="2020-12-27T23:40:26 EET" name="Default suite" finished-at="2020-12-27T23:41:25 EET" duration-ms="58347">
     <groups>
     </groups>
-    <test started-at="2020-12-26T21:53:04 EET" name="Default test" finished-at="2020-12-26T21:53:58 EET" duration-ms="53663">
-      <class name="Tests.NewTesT">
-        <test-method is-config="true" signature="beforClass()[pri:0, instance:Tests.NewTesT@16e7dcfd]" started-at="2020-12-26T21:53:04 EET" name="beforClass" finished-at="2020-12-26T21:53:08 EET" duration-ms="3788" status="PASS">
+    <test started-at="2020-12-27T23:40:26 EET" name="Default test" finished-at="2020-12-27T23:41:25 EET" duration-ms="58347">
+      <class name="Tests.AutomationPracticeTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Tests.AutomationPracticeTest@3b07a0d6]" started-at="2020-12-27T23:40:26 EET" name="beforeClass" finished-at="2020-12-27T23:40:30 EET" duration-ms="3955" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforClass -->
-        <test-method signature="LoginTest()[pri:0, instance:Tests.NewTesT@16e7dcfd]" started-at="2020-12-26T21:53:08 EET" name="LoginTest" finished-at="2020-12-26T21:53:58 EET" duration-ms="49821" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="LoginTest()[pri:0, instance:Tests.AutomationPracticeTest@3b07a0d6]" started-at="2020-12-27T23:40:30 EET" name="LoginTest" finished-at="2020-12-27T23:41:24 EET" duration-ms="54001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-      </class> <!-- Tests.NewTesT -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Tests.AutomationPracticeTest@3b07a0d6]" started-at="2020-12-27T23:41:24 EET" name="afterClass" finished-at="2020-12-27T23:41:25 EET" duration-ms="324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Tests.AutomationPracticeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

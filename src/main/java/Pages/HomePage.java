@@ -16,17 +16,17 @@ public class HomePage {
 	By BlousesCategory =By.xpath("//a[@title=\'Blouses\']");
 	
 	
-	public HomePage(WebDriver browserobject, WebDriverWait wait,Actions mousehover)
+	public HomePage(WebDriver browserobject, WebDriverWait wait)
 	{
 		this.browserobject=browserobject;
 		this.wait=wait;
-		this.mousehover=mousehover;
+		
 		
 	}
 	
 	public void navigateToBlousesCategoryPage() throws InterruptedException
 	{
-		
+		 mousehover = new Actions(browserobject);
 		mousehover.moveToElement(browserobject.findElement(WomanCategory)).build().perform();
 		wait.until(ExpectedConditions.elementToBeClickable(browserobject.findElement(BlousesCategory)));
 		browserobject.findElement(BlousesCategory).click();

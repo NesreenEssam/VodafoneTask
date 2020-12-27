@@ -19,21 +19,24 @@ public class PaymentPage {
 	By ConfirmBtn = By.xpath("//span[contains(.,\'I confirm my order\')]");
 	By BackToOrderBtn = By.xpath("//a[@title=\'Back to orders\']");
 	By HomeButton = By.xpath("//span[contains(.,\'Home\')]");
+	By ActualOrder = By.xpath("(//span[@class='price' and contains(.,'$30.16')])[1]");
+	String ActualOrderPrice;
 	
-	String ActualOrderPrice = "$30.16";
+	//String ActualOrderPrice = browserobject.findElement(By.xpath("(//span[@class='price' and contains(.,'$30.16')])[1]")).getText();
+      //WebElement element =   browserobject.findElement(By.xpath("(//span[@class='price' and contains(.,'$30.16')])[1]"));
 	String ExpectedOrderPrice = "$30.16";
 	
-	public PaymentPage(WebDriver browserobject, WebDriverWait wait,JavascriptExecutor js)
+	public PaymentPage(WebDriver browserobject, WebDriverWait wait)
 	{
 		this.browserobject=browserobject;
 		this.wait=wait;
-		this.js=js;
+		
 		
 	}
 	
 	public void SelectBankWireAndConfirmOrder() throws InterruptedException
 	{
-
+		js = (JavascriptExecutor) browserobject;
 		 wait.until(ExpectedConditions.visibilityOfElementLocated(BankWireOption));
 		 WebElement BankWire =browserobject.findElement(BankWireOption);  
 		 js.executeScript("arguments[0].scrollIntoView(true);", BankWire);
@@ -47,7 +50,7 @@ public class PaymentPage {
 	
 	public void ValidateOrderExistInOrderHistory() throws InterruptedException
 	{
-
+		 ActualOrderPrice = browserobject.findElement(ActualOrder).getText();
 		 wait.until(ExpectedConditions.visibilityOfElementLocated(BackToOrderBtn));
 		 WebElement BackToOrderOption =browserobject.findElement(BackToOrderBtn);  
 		 js.executeScript("arguments[0].scrollIntoView(true);", BackToOrderOption);

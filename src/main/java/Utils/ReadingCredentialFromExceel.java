@@ -4,15 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ReadingCredentialFromExceel {
 	
@@ -23,7 +18,7 @@ WebDriver browserobject;
 		this.browserobject= browserobject;
 	}
 	
-	public String ReadingData(int row ,int col) throws IOException
+	public static String ReadingData(int row ,int col) throws IOException
 	{
 		
 		 File src=new File("ValidCredentials.xlsx");
@@ -39,8 +34,7 @@ WebDriver browserobject;
 	     return val;
 	     
 	    
-	     
-	      
+	       
 	}
 
 

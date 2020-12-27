@@ -21,16 +21,17 @@ public class BlousesPage {
 	By AddToCartBtn = By.xpath("//span[contains(.,\'Add to cart\')]");
 	By ProceedToCheckBtn = By.xpath("//span[contains(.,\'Proceed to checkout\')]");
 	
-	public BlousesPage(WebDriver browserobject, WebDriverWait wait,JavascriptExecutor js)
+	public BlousesPage(WebDriver browserobject, WebDriverWait wait)
 	{
 		this.browserobject=browserobject;
 		this.wait=wait;
-		this.js=js;
+		
 		
 	}
 
 	public void SelectResultedItem() throws InterruptedException
 	{
+		js = (JavascriptExecutor) browserobject;
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ResultedProduct));
 		WebElement ResultedItem =browserobject.findElement(ResultedProduct);  
